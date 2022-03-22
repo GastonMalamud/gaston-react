@@ -1,28 +1,2 @@
-.img-header{
-  width: 50px;
-  margin-left: 10px;
-  margin-top: 10px;
-}
 
-header.main-header {
-  width: 100%;
-  display: flex;
-  padding: 10px 25px;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-}
 
-ul.navbar {
-  list-style: none;
-  display: flex;
-}
-
-ul.navbar li {
-  margin-right: 15px;
-  color:#1000ee52
-}
-.title-header{
-  color: hotpink;
-  font-size: 30px;
-}
