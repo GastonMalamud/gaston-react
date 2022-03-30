@@ -34,16 +34,19 @@ const ListProducts = () => {
 ]
 const [products, setProducts] = useState([])
 
-const itemProducts = () => {
-    return new Promise((resolve, reject) => {
-         return resolve(mockProductos)
-     })
+ const getListProducts = () => {
+     return new Promise ((resolve, reject) => {
+         setTimeout(() => {
+             return resolve (mockProductos)
+         }, 2000);
+     });
  }
  useEffect(() => {
-    itemProducts().then((data) => {
+    getListProducts().then((data) => {
         setProducts(data)
     })
 }, [])
+console.log(mockProductos);
 
 return(
     <div className="container-cards">
