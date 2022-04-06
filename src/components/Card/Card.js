@@ -2,10 +2,8 @@ import React,{ useState, useEffect } from 'react'
 import './Card.css'
 import Button from '@mui/material/Button';
 import ItemCount from '../ItemCount/ItemCount'
-import { Link, useNavigate } from 'react-router-dom'
 
 export default function Card({ data }) {
-    const navigate = useNavigate();
     const { title, price, stock, image } = data
     const [ count, setCount ] = useState(1)
     const [ countTest, setCountTest ] = useState(1)
@@ -28,20 +26,6 @@ export default function Card({ data }) {
     //         console.log("FASE DE DESMONTAJE")
     //     }
     // })
-    useEffect( () => {
-        console.log("useEffect")
-        const onScrollWindow = () => {
-            if(window.scrollY > 100 ){
-                console.log("Scroll mayor a 100")
-            }
-        }
-        window.addEventListener("scroll", onScrollWindow)
-        
-        return () => {
-            window.removeEventListener("scroll", onScrollWindow)
-        }
-        
-    }, [])
 
     const addStock = () => {
         setCount(count + 1)
