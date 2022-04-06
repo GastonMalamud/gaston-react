@@ -3,25 +3,37 @@ import ListProducts from '../ListProducts/ListProducts'
 import React,{ useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import ItemCount from '../ItemCount/ItemCount'
+import Container from '@mui/material/Container';
 
-export default function ItemDetail({ data }) {
-    const { title, price, stock, image } = data
 
+const ItemDetail = ({data}) => {
+    
     return(
-        <div className="card-item">
-            <img src={`./${image}`} alt={image} />
-            
-            <div className='container-card-data'>
-                <h2>{title}</h2>
-                <p>Precio : $ {price}</p>
-                <p>ESPECIFICACIONES:
-                Disfruta y comparte tus mejores fotos al momento con esta cámara instantánea de Kodak. Disponible en dos acabados, esta compacta de bolsillo cuenta con un sensor de imagen y produce impresiones en papel Zink adhesivo
-                No olvides comprar papel Kodak Zink para tu Printomatic</p>
-                <ItemCount stock={stock}/>
-                <br/>
-                <Button variant="outlined" className="buttonCard">COMPRAR</Button>
-                
+        <Container className='container-general'> 
+            <div className='container-detail'>
+            <div className='container-detail__img'>
+                <img src={data.image} alt="jean" />
             </div>
-        </div>
+            <div className='container-detail__info'>
+                <h3 className='info__title'>{data.title}</h3>
+                <p className='info__text'>$ {data.price}</p>
+                <p className='info__subtitle'>TALLE</p>
+                <p className='info__text'>{data.talle}</p>
+                <p className='info__subtitle'>COLOR</p>
+                <ul className='info__color'>
+                    {/* {data.colors.map( (color) => {
+                        return(
+                            <li style={{background: `${color.hex}`}}></li>
+                        )
+                    })}                     */}
+                </ul>
+                <p className='info__subtitle'>DETALLE</p>
+                <p className='info__text detail__text'>{data.description}</p>
+                <Button className='detail__btn-buy'>COMPRAR</Button>
+            </div>
+            </div>
+        </Container>
     )
 }
+
+export default ItemDetail

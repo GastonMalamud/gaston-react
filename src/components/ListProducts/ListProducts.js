@@ -1,66 +1,45 @@
 import Card from '../Card/Card'
 import React, {useState, useEffect} from 'react'
 import './ListProducts.css'
+import mockProductos from '../../Utils/productsMock'
+import { useParams } from 'react-router-dom'
+import ThemeContext from '../../context/ThemeContext'
 
-const ListProducts = () => {
-    const mockProductos = [{
-        title : 'Kodak Printomatic',
-        id: 1,
-        price: 13999,
-        image: '1.jpg',
-        stock: 3
-    },
-    {
-        title : 'Kodak Mini Shot Retro',
-        id: 2,
-        price: 8799,
-        image: '2.jpg',
-        stock: 4  
-    },
-    {
-        title : 'Kodak Smile Classic',
-        id: 3,
-        price: 9999,
-        image: '3.jpg',
-        stock: 7  
-    },
-    {
-        title : 'Kodak Mini Shot',
-        id: 3,
-        price: 11999,
-        image: '4.jpg',
-        stock: 5  
+const ListProducts = ({children}) => {
+    const { lightTheme } = useContext(ThemeContext)
+    const { category } = useParams()
+
+    const [products, setProducts] = useState([])
+
+    const getProducts = () => {
+        return new Promise((resolve, reject) => {
+            return resolve(mockProductos)
+        })
+    } 
+
+    useEffect( () => {
+        setProducts([])
+        getProducts().then( (productos) => {
+            category ? filterProductByCategory(productos, category) : setProducts(productos)
+        })
+    }, [category])
+
+
+    const filterProductByCategory = (array , category) => {
+        return array.map( (product, i) => {
+            if(product.category === category) {
+               return setProducts(products => [...products, product]);
+            }
+        })
     }
-]
-const [products, setProducts] = useState([])
 
- const getListProducts = () => {
-     return new Promise ((resolve, reject) => {
-         setTimeout(() => {
-             return resolve (mockProductos)
-         }, 2000);
-     });
- }
- useEffect(() => {
-    getListProducts().then((data) => {
-        setProducts(data)
-    })
-}, [])
-console.log(mockProductos);
 
-return(
-    <div className="container-cards">
-        <h2> Productos en Oferta</h2>
-        {products.map( ( product ) => {
-            const {id} = product
-
-            return(
-                <Card data={product} key={id}/>
-            )
-        })}
-    </div>
-) 
+    return(
+        <div className={`container-cards ${lightTheme ? 'light-mode' : ''}`}>
+            <h2> Productos en Oferta </h2>
+            {products.map( ( product ) =>  <Card data={product} key={product.id} />)}
+        </div>
+    ) 
 }
-
 
 export default ListProducts;

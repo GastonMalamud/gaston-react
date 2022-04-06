@@ -1,2 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=Montserrat:wght@100;300;500&display=swap');
+p,a,h1,h2,h3,h4,span {
+  font-family: 'Montserrat', sans-serif;
+}
+header.main-header {
+  width: 100%;
+  display: flex;
+  padding: 10px 25px;
+  box-shadow: 1px 5px 15px #81818129;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background: black;
+}
 
+ul.navbar {
+    list-style: none;
+    display: flex;
+}
+
+ul.navbar li {
+    margin-right: 15px;
+}
+
+header.main-header li button {
+  background: none;
+  font-family: 'Montserrat';
+  transition: all 0.2s ease;
+}
+header.main-header li button:hover {
+  background: none;
+}
+
+.container-logo {
+  width: 100px;
+}
+
+.container-logo img {
+  width: 100%;
+}
+.card-item {
+  float: left;
+  width: calc(33.333% - 14px);
+  margin-top: 20px;
+  margin-left: 20px;
+  box-shadow: 1px 1px 5px #0000002b;
+  text-align: center;
+  overflow: hidden;
+}
+.container-general {
+  width: 1200px;
+}
+.container-cards {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/*Styles Detail Component*/
+
+.container-detail {
+  display: flex;
+  padding: 20px 0px;
+}
+
+.container-detail__img {
+  width: 65%;
+}
+
+.container-detail__img img {
+  width: 100%;
+}
+
+.container-detail__info {
+  width: 35%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-detail .detail__btn-buy {
+  background: black;
+  color: white;
+  width: 100%;
+  border-radius: 0px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+}
+
+.container-detail .detail__btn-buy:hover {
+  background: black;
+  color: white;
+}
+
+h3.info__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+p.info__text {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 10px 0px;
+}
+
+.detail__text {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #0000004a;
+}
+
+ul.info__color {
+  padding-left: 0px;
+  list-style: none;
+  margin: 10px 0px;
+  display: flex;
+}
+
+ul.info__color li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+p.info__subtitle {
+  font-size: 16px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.faq-section h3 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Montserrat';
+}
+
+.faq-section p {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: 'Montserrat';
+  width: 300px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+form > button {
+  background: black !important;
+  color: white !important;
+  border-radius: 0px !important;
+  width: 300px;
+  font-family: 'Montserrat' !important;
+}
+
+form > button:hover {
+  background: black !important;
+  color: white !important;
+}
 
