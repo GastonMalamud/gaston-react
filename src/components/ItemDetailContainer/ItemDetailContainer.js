@@ -3,15 +3,16 @@ import ListProducts from "../ListProducts/ListProducts";
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
-    const mockProductos = [{
+const [dataproducts, setProducts] = useState({})
+
+    const mockProductos = {
         title : 'Kodak Printomatic',
         id: 1,
         price: 13999,
         image: '1.jpg',
         stock: 3
-    },
-]
-const [products, setProducts] = useState([])
+    }
+
 
 const getItem = () => {
     return new Promise ((resolve, reject) => {
@@ -26,6 +27,11 @@ useEffect(() => {
    })
 }, [])
 console.log(mockProductos);
+
+return(
+        <ItemDetail data={dataproducts}/>
+
+) 
 }
 
 export default ItemDetailContainer;
