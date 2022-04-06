@@ -23,7 +23,8 @@ function App () {
     <div className="App">
     <NavBar />
     <Container className='container-general'> 
-        <ListProducts />
+    <ListProducts />
+    <ItemDetailContainer />
       </Container>
     
     </div>
