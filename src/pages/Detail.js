@@ -24,7 +24,7 @@ const DetailPage = () => {
         <Container className='container-general'> 
             <div className='container-detail'>
             <div className='container-detail__img'>
-                <img src={`../${product.image}`} alt="jean" />
+                <img src={`../${product.image}`} alt="Kodak Printomatic" />
             </div>
             <div className='container-detail__info'>
                 <h3 className='info__title'>{product.title}</h3>

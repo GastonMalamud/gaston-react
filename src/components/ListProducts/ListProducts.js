@@ -1,5 +1,5 @@
 import Card from '../Card/Card'
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import './ListProducts.css'
 import mockProductos from '../../Utils/productsMock'
 import { useParams } from 'react-router-dom'

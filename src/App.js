@@ -15,6 +15,7 @@ import HomePage from './pages/Home'
 import ContactPage from './pages/Contact'
 import NotFoundPage from './pages/NotFound'
 import DetailPage from './pages/Detail';
+import NosotrosPage from './pages/Nosotros'
 //context
 import { ThemeProvider } from './context/ThemeContext';
 import { CartProvider } from './context/CartContext';
@@ -29,6 +30,7 @@ function App () {
           <NavBar />
           <Routes>
             <Route path="/contacto" element={<ContactPage />}/>
+            <Route path="/nosotros" element={<NosotrosPage />}/>
             <Route path="/" element={<HomePage />}/>
             <Route path="/:category/" element={<HomePage />}/>
             <Route path="/:category/:id" element={<DetailPage />}/>
