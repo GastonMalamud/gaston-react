@@ -12,7 +12,7 @@ const ItemDetail = ({data}) => {
         <Container className='container-general'> 
             <div className='container-detail'>
             <div className='container-detail__img'>
-                <img src={data.image} alt="jean" />
+                <img src={data.image} alt="camara" />
             </div>
             <div className='container-detail__info'>
                 <h3 className='info__title'>{data.title}</h3>
@@ -24,8 +24,6 @@ const ItemDetail = ({data}) => {
             </div>
         </Container>
     )
-}
-const ItemCount = () => {
     return(
         <div>
             <ItemCount />
