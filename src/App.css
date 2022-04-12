@@ -265,6 +265,9 @@ header.main-header.light-mode ul.navbar * {
 header.main-header.light-mode .cart-button * {
   color: black;
 }
+header.main-header.light-mode .body{
+  background: black;
+}
 .parrafoNos {
   text-align: center;
   font-size: 20px;

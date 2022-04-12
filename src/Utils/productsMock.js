@@ -19,7 +19,7 @@ const mockProductos = [{
     id: 3,
     price: 9999,
     image: 'vintage3.jpg',
-    category: 'camaras',
+    category: 'vintage',
     stock: 7  
 },
 {
