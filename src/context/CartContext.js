@@ -12,7 +12,7 @@ const CartProvider = ({children}) => {
     }
 
     const calculeTotalPrice = () => {
-        let total = 0
+        let total = 100
 
         cartProducts.map( (cartProduct) => {
            total = cartProduct.price + total

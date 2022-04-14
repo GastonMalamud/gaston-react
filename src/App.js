@@ -16,6 +16,7 @@ import ContactPage from './pages/Contact'
 import NotFoundPage from './pages/NotFound'
 import DetailPage from './pages/Detail';
 import NosotrosPage from './pages/Nosotros'
+import CartPage from './pages/CartPage'
 //context
 import { ThemeProvider } from './context/ThemeContext';
 import { CartProvider } from './context/CartContext';
@@ -29,6 +30,7 @@ function App () {
         <BrowserRouter>
           <NavBar />
           <Routes>
+            <Route path="/cart" element={<CartPage />}/>
             <Route path="/contacto" element={<ContactPage />}/>
             <Route path="/nosotros" element={<NosotrosPage />}/>
             <Route path="/" element={<HomePage />}/>

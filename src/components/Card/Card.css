@@ -31,6 +31,10 @@
     font-size: 14px;
     font-weight: 300;
 }
+.card-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
 
 .container-cards .card-item:nth-of-type(1) {
     margin-left: 0px;

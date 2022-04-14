@@ -10,7 +10,7 @@ export default function Card({ data, action }) {
 
     const navigate = useNavigate();
     const { cartProducts, addProductToCart } = useContext(CartContext)
-    const { title, price, talle, stock, image, id } = data
+    const { title, price, stock, image, id } = data
     const [ count, setCount ] = useState(1)
     const [ countTest, setCountTest ] = useState(1)
     //const [ ]
