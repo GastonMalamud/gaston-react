@@ -60,7 +60,7 @@ const ThemeSwitch = () => {
     return(
             <FormControlLabel
                 control={<MaterialUISwitch sx={{ m: 1 }} onChange={handleTheme}/>}
-                label="MUI switch"
+                label="Modo Oscuro"
             />
         )
 }

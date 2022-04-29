@@ -18,6 +18,7 @@ const CartWidget = () => {
     const handleClose = () => {
       setAnchorEl(null);
     };
+
     console.log("cartProducts: ", cartProducts)
 
     return (

@@ -403,3 +403,6 @@ button.btn-delete {
 button.btn-delete:hover {
   transform: scale(1.09);
 }
+.custom-checkbox input[type=checkbox] {
+width: 16px;
+}

@@ -27,31 +27,43 @@ const ContactPage = () => {
             <h2>Preguntas Frecuentes</h2>
             <div className='faq-section'>
                 <section>
-                    <h3>Consultas de stock</h3>
-                    <h4>¿Hay stock de todos los productos?</h4>
+                    <h3>Consultas</h3>
+                    <h4>¿Tienen tienda física?</h4>
                     <p>
-                        Todos los productos que publicamos están en stock. En caso de agotarse algún talle o color, esa característica se bloqueará, se verá color gris y no podrás seleccionarla. Haciendo click en el botón Consultar disponibilidad vas a poder realizar consulta de disponibilidad de stock y te enviaremos un email cuando haya stock nuevamente.
+                    No, nuestra actividad comercial se realiza a través de esta página web.
                     </p>
-                    <h4>¿Hay algún límite de compra?</h4>
+                    <h4>¿Son distribuidores?</h4>
                     <p>
-                        El único límite de compra que tenemos es el stock de nuestro E-Shop. Si deseás hacer una compra mayorista comunicate con nosotros a 
+                    Distribuimos en exclusividad para los mercados de Argentina algunas de las marcas presentes en Tienda Polaroid.
                     </p>
                 </section>
                 <section>
-                    <h3>Envío y seguimiento</h3>
-                    <h4>¿Puede recibir el paquete otra persona?</h4>
-                    <p>Tu pedido puede ser recibido por cualquier persona mayor de 18 años que se encuentre en el domicilio registrado.</p>
-                    <h4>¿Cuándo voy a recibir mi pedido?</h4>
-                    <p>Los pedidos son entregados a través de los correos Andreani – Saires y Moova en toda la República Argentina.</p>
-                    <h4>¿Qué pasa si no hay nadie cuando traen mi pedido?</h4>
-                    <p>Si no hay nadie en el domicilio que nos indicaste, el correo regresará a las 48 horas. En caso de no encontrar a nadie, deberás dirigirte al centro de distribución asignado a tu pedido dentro de las 72 horas con tu DNI y el código que te enviamos (tracking number).</p>
+                    <h3>POLÍTICA DE PRIVACIDAD</h3>
+                    <h4>Razón social</h4>
+                    <p>Reflecta,S.A</p>
+                    <h4>Finalidad</h4>
+                    <p>Atender dudas o preguntas de usuarios</p>
+                    <h4>Legitimación</h4>
+                    <p>Consentimiento</p>
+                    <h4>Destinatarios</h4>
+                    <p>Tus datos no serán compartidos con ningún tercero (salvo aquellos proveedores de servicios con los que disponemos de un contrato de servicios vigente)</p>
+                    <h4>Derechos</h4>
+                    <p>Puedes acceder, rectificar o suprimir tus datos, así como ejercer los derechos que se mencionan en nuestra política de privacidad</p>
                 </section>
                 <section>
                     <h3>Contacto</h3>
                     <form onSubmit={handleSubmit}>
-                        <input type="text" onKeyDown={handleChange} value={value} placeholder='Nombre'/>
+                        <input type="text" placeholder='Nombre'/>
                         <input type="text" placeholder='Apellido'/>
                         <input type="mail" placeholder='mail'/>
+
+                        <div className="col-md-8  offset-md-3">
+<span class="custom-checkbox">
+  
+  <span><input name="st_reg_terms_and_conditions" id="ff_st_reg_terms_and_conditions" type="checkbox" value="1" required=""></input><i className="fa fa-check rtl-no-flip checkbox-checked" aria-hidden="true"></i></span>
+  <label for="ff_st_reg_terms_and_conditions">Acepto la política de privacidad</label>
+</span>
+</div>
 
                         <Button onClick={resetForm}>Limpiar Formulario</Button>
                         <Button type="submit">Enviar</Button>
@@ -61,5 +73,12 @@ const ContactPage = () => {
         </Container>
     )
 }
+
+
+
+
+
+    
+
 
 export default ContactPage
