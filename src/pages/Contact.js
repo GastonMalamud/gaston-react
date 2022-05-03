@@ -53,9 +53,9 @@ const ContactPage = () => {
                 <section>
                     <h3>Contacto</h3>
                     <form onSubmit={handleSubmit}>
-                        <input type="text" placeholder='Nombre'/>
-                        <input type="text" placeholder='Apellido'/>
-                        <input type="mail" placeholder='mail'/>
+                        <input type="text" name='name' placeholder='Nombre' required="name"/>
+                        <input type="text" name='apellido' placeholder='Apellido' required="apellido"/>
+                        <input type="mail" name='mail' placeholder='mail'required="mail"/>
 
                         <div className="col-md-8  offset-md-3">
 <span class="custom-checkbox">

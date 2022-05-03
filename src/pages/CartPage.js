@@ -120,15 +120,15 @@ const CartPage = () => {
                     <>
                         <h2>FORM USUARIO</h2>
                         <form onSubmit={handleSubmit}>
-                            <input type="text" name='name' placeholder='Nombre' 
+                            <input type="text" name='name' placeholder='Nombre' required="name"
                                 onChange={handleChange} 
                                 value={formData.name}
                             />
-                            <input type="number" name='phone' placeholder='Telefono' 
+                            <input type="number" name='phone' placeholder='Telefono' required="number"
                                 onChange={handleChange} 
                                 value={formData.phone}
                             />
-                            <input type="mail" name='email' placeholder='mail' 
+                            <input type="mail" name='email' placeholder='mail' required="mail"
                                 onChange={handleChange} 
                                 value={formData.email}
                             />
